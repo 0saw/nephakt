@@ -46,7 +46,7 @@ export const init = (): void => {
       }
       
       <div class="prose prose-slate">
-        <h1 class="mb-0">${title}${year === '' ? ` (${year})` : ''}</h1>
+        <h1 class="mb-0">${title}${year !== '' ? ` (${year})` : ''}</h1>
       
         ${tagline !== '' ? `<blockquote class="my-2">${tagline}</blockquote>` : ''}
       
