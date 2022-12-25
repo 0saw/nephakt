@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .elude {
+        @apply relative;
+    }
+
+    .elude::before,
+    .elude::after {
+        @apply absolute top-0 bottom-0 h-full w-2;
+
+        content: '';
+    }
+
+    .elude::before {
+        left: 0;
+        background: linear-gradient(to right, theme('colors.slate.100'), transparent);
+    }
+
+    .elude::after {
+        right: 0;
+        background: linear-gradient(to left, theme('colors.slate.100'), transparent);
+    }
+}

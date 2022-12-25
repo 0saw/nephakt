@@ -8,6 +8,7 @@
         "noImplicitAny": true,
         "strictNullChecks": true,
         "skipLibCheck": true,
-        "isolatedModules": true
+        "isolatedModules": true,
+        "moduleResolution": "Node16"
     }
 }

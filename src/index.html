@@ -6,8 +6,44 @@
     <title>Nephakt</title>
     <link rel="stylesheet" href="./index.css">
 </head>
-<body>
+<body class="bg-slate-100">
 
-<script src="./index.ts" type="module"></script>
+<div class="min-h-screen">
+    <div class="mx-auto max-w-7xl p-4 grid grid-cols-1 lg:grid-cols-[28rem,auto] gap-y-3 gap-x-8 items-baseline">
+        <form class="js-suggest-form relative z-50" action="/" method="get">
+            <input
+                class="js-suggest-input w-full rounded-t rounded-b border border-slate-300 bg-white px-3 py-2 shadow outline-none peer"
+                type="text"
+                name="q"
+                autocomplete="off"
+                placeholder="Поиск"
+                required
+            />
+
+            <button
+                class="js-suggest-clear absolute top-0 right-0 bottom-0 m-auto peer-valid:flex hidden h-10 w-10 items-center justify-center rounded-r text-slate-400 outline-none hover:text-slate-500 focus-visible:text-slate-500"
+                type="button"
+            >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                     stroke="currentColor" class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+
+            <ul class="js-suggest-options absolute top-full -mt-1 w-full overflow-hidden rounded-b border border-slate-300 bg-white py-1 shadow-lg"></ul>
+        </form>
+
+        <div class="js-history grid sm:grid-cols-[4rem,1fr] items-baseline gap-x-4 whitespace-nowrap text-slate-600">
+            История:
+            <div class="elude -ml-2 -mr-2 min-w-0">
+                <ul class="js-history-list pl-2 pr-2 flex gap-4 scrollbar scrollbar-none"></ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="js-detail mx-auto max-w-7xl p-4 grid md:grid-cols-[300px,1fr] gap-y-4 gap-x-8"></div>
+</div>
+
+<script src="index.ts" type="module"></script>
 </body>
 </html>
