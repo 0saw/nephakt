@@ -52,7 +52,7 @@ export const fetchSuggestions = async (): Promise<void> => {
 }
 
 const purifySearchString = (str: string): string => (
-  str.replaceAll(/\W/g, '').toLowerCase()
+  str.toLowerCase().replaceAll(/[^a-zа-яё]/g, '')
 )
 
 export const getVisibleOptions = (): Option[] => {

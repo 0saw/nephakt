@@ -1,6 +1,6 @@
 import type { URLParts } from '../types'
 
-const PATH_REGEXP = /^#(?<path>[^?]+)\??(?<search>.*)?$/
+const PATH_REGEXP = /^#(?<path>[^?]+)?\??(?<search>.*)?$/
 
 export const getURLParts = (): URLParts => {
   const match = window.location.hash.match(PATH_REGEXP)
